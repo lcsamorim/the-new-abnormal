@@ -1,0 +1,182 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+:root {
+  --headline-color: white;
+  --background-color: #ff6b38;
+  --text-color: rgb(255, 255, 255);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: var(--background-color);
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-color);
+  text-align: center;
+}
+
+#loading-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.885);
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  z-index: 99999;
+}
+
+#loading-screen p {
+  margin: 0;
+}
+
+.canvas-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.headline-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.text-front {
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  text-align: center;
+  font-size: clamp(24px, 20vw, 200px);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 10px;
+  line-height: 0.8;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--headline-color);
+  z-index: 3;
+}
+
+#the-strokes {
+  font-size: clamp(6px, 5vw, 50px);
+  -webkit-text-stroke: 0.6px var(--headline-color);
+  left: 0;
+  right: 0;
+  bottom: 10vh;
+}
+
+#toggleButton {
+  display: flex;
+  cursor: pointer;
+
+  padding: 30px;
+}
+
+#toggleButton.hidden {
+  display: none;
+}
+
+#spotify-icon {
+  z-index: 9999;
+  height: 30px;
+  width: auto;
+  margin: 0;
+}
+
+#backButton {
+  position: fixed;
+  top: 90px;
+  left: -5vw;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  /* Faz com que o botão seja redondo */
+  background-color: #ffffff43;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  z-index: 9999;
+  transition: left 0.3s ease;
+}
+
+#backButton:active {
+  background-color: #ffffff5b;
+}
+
+ul {
+  position: absolute;
+  text-align: right;
+  font-size: 0.7em;
+  font-weight: 600;
+  padding: 30px;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+li {
+  list-style-type: none;
+}
+
+#menuContainer {
+  position: fixed;
+  top: 0;
+  left: -25vw;
+  width: 25vw;
+  height: 100%;
+  transition: left 0.3s ease;
+  z-index: 9998;
+}
+
+#menuContent {
+  color: white;
+}
+
+#iframeContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9997;
+}
+
+#iframe {
+  width: 25vw;
+  height: 100vh;
+}
+
+#credits {
+  z-index: 9999;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 10px;
+
+}
+
+/*# sourceMappingURL=main.css.map*/
